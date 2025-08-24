@@ -1,0 +1,195 @@
+/* Basic styling for the container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Create button styling */
+#create-btn {
+  display: inline-block;
+  background-color: #5c6bc0;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+#create-btn:hover {
+  background-color: #3f51b5;
+  transform: scale(1.1);
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+table th {
+  background-color: #5c6bc0;
+  color: white;
+}
+
+table tbody tr:hover {
+  background-color: #f1f3f8;
+}
+
+/* Link styles */
+a {
+  color: #5c6bc0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Actions buttons (Edit, Delete) */
+td a, td button {
+  color: #5c6bc0;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  transition: color 0.3s, transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover effect on Edit and Delete icons */
+td a:hover, td button:hover {
+  color: #3f51b5;
+  transform: scale(1.2); /* Slightly increase the size */
+}
+
+/* Delete button style */
+td button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Animation on load for the table rows */
+tbody tr {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+tbody tr:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+tbody tr:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
+/* Keyframe for fade-in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  /* Adjust container padding */
+  .container {
+    padding: 15px;
+  }
+
+  /* Adjust heading font size */
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  /* Stack the create button */
+  #create-btn {
+    font-size: 15px;
+    border-radius: 10px;
+    height: 15px;
+    padding: 10px
+}
+  /* Make table full width and remove excessive padding */
+  table {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  table th,
+  table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Make action buttons in the table more compact */
+  td a,
+  td button {
+    font-size: 1rem;
+    margin-right: 5px;
+  }
+
+  /* Ensure table is scrollable on smaller screens */
+  .container {
+    overflow-x: auto;
+  }
+
+  /* Adjust hover effects for smaller screens */
+  td a:hover, td button:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further reduce the padding for mobile */
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  /* Create button full width and slightly larger font */
+  .create-btn {
+    font-size: 1.2rem;
+    padding: 18px;
+  }
+
+  /* Make table font size smaller for mobile */
+  table th,
+  table td {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  /* Adjust action buttons */
+  td a,
+  td button {
+    font-size: 1rem;
+  }
+}
